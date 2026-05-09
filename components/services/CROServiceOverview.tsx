@@ -28,7 +28,7 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
           
           <div className="relative z-10 w-full max-w-sm flex flex-col items-center">
             
-            <div className="w-full flex flex-col items-center gap-2 mb-8">
+            <div className="w-full flex flex-col items-center gap-8 mb-8">
               <span className="text-brand-cool-gray text-xs uppercase tracking-widest font-bold">The Funnel</span>
               
               {/* Funnel Stage 1 */}
@@ -99,24 +99,24 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
           <h2 className="text-3xl md:text-5xl font-bold text-white font-orbitron leading-tight mb-8">
             {title || (
               <>
-                Looking for performance marketing that actually  <span className="text-brand-cyan-blue">drives pipeline?</span>
+                CRO Services Built for Precision, Performance & 
+  <span className="text-brand-cyan-blue"> Profitable Growth</span>
               </>
             )}
-          </h2>
-          <p>Most agencies optimize for clicks. We optimize for closed deals.</p>
+          </h2> 
           <div className="flex flex-col gap-6 text-brand-cool-gray leading-relaxed mb-10">
             {paragraphs ? (
               paragraphs.map((p, i) => <p key={i}>{p}</p>)
             ) : (
               <>
                 <p>
-                 At Axenra Technologies, performance marketing isn't just about running paid ads — it's about building a full-funnel acquisition system. We combine paid search, paid social, conversion-optimized landing pages, and data-driven audience targeting into one integrated strategy that consistently fills your sales pipeline.
+                Discover the methodology behind our clients' breakthrough results. ConvertFlux is a team of dedicated conversion strategists, UX researchers, and data scientists with a proven track record in delivering CRO services that directly lift revenue — not just vanity metrics.
                 </p>
                 <p>
-                  Our team maps your entire buyer journey — from the first ad impression to the booked sales call — and engineers every touchpoint to move your ICP closer to a decision. We obsess over conversion rates, funnel drop-offs, and revenue attribution so you can invest with confidence.
+                  We are obsessed with understanding user behaviour. Our mission: to remove every obstacle between your visitor and your conversion goal — whether that's a form submission, a purchase, a call booked, or a trial started. We combine qualitative research, quantitative analysis, and behavioural psychology to craft optimisations that feel effortless to users.
                 </p>
                 <p>
-                  Whether you're scaling a SaaS product, generating leads for a high-ticket B2B service, or breaking into a new market — we build the performance engine that gets you there predictably.
+                  Our CRO experts are deeply experienced across paid media funnels, e-commerce stores, SaaS trials, and lead generation pages. We follow proven testing frameworks and the latest CRO best practices to ensure your marketing campaigns achieve their full revenue potential. Let us optimise the landscape together.
                 </p>
               </>
             )}

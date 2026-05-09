@@ -6,9 +6,17 @@ import Link from 'next/link';
 
 interface CROBenefitShowcaseProps {
   buttonText?: string;
+  data: {
+    h1: string;
+    para: string;
+    sub: {
+      h2: string;
+      para1: string;
+    }[]
+  }
 }
 
-export default function CROBenefitShowcase({ buttonText }: CROBenefitShowcaseProps) {
+export default function CROBenefitShowcase({ buttonText, data }: CROBenefitShowcaseProps) {
   return (
     <section className="py-24 bg-[#060913] border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -91,38 +99,27 @@ export default function CROBenefitShowcase({ buttonText }: CROBenefitShowcasePro
             // WHY CHOOSE US
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-orbitron leading-tight mb-8">
-            We help B2B and SaaS businesses build the  
- <span className="text-brand-cyan-blue">most predictable pipeline</span>
+            {data.h1}
           </h2>
           
           <p className="text-brand-cool-gray leading-relaxed mb-10">
-            Ready to see why growth-focused teams trust Axenra to run their performance marketing? Here's what we bring to every engagement.
+            {data.para}
           </p>
 
           <div className="flex flex-col gap-8 mb-10">
-            <div className="flex gap-4">
+           {data.sub.map((item) => (
+             <div className="flex gap-4">
               <div className="w-10 h-10 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center shrink-0 mt-1">
                 <CheckCircle2 className="text-[#00C2FF]" size={20} />
               </div>
               <div>
-                <h4 className="text-white font-bold mb-2">B2B and SaaS specialists</h4>
+                <h4 className="text-white font-bold mb-2">{item.h2}</h4>
                 <p className="text-sm text-brand-cool-gray leading-relaxed">
-                  We don't run generic campaigns for generic businesses. Our entire playbook is built around the longer sales cycles, multi-stakeholder decisions, and intent signals unique to B2B and SaaS buying — so your campaigns hit the right people at the right moment.
+                  {item.para1}
                 </p>
               </div>
             </div>
-
-            <div className="flex gap-4">
-              <div className="w-10 h-10 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center shrink-0 mt-1">
-                <CheckCircle2 className="text-[#00C2FF]" size={20} />
-              </div>
-              <div>
-                <h4 className="text-white font-bold mb-2">Pipeline that compounds</h4>
-                <p className="text-sm text-brand-cool-gray leading-relaxed">
-                 We integrate performance marketing with your SEO and content strategy — so paid and organic channels reinforce each other. The result is a pipeline that doesn't stop the moment you pause a campaign.
-                </p>
-              </div>
-            </div>
+           ))} 
           </div>
           
           <Link 

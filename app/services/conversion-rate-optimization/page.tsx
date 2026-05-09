@@ -108,7 +108,24 @@ export default function CROPage() {
         services={croServices}
       />
       
-      <CROBenefitShowcase buttonText="Start your CRO audit" />
+      <CROBenefitShowcase
+        data={
+        {
+          h1: "We Help Businesses Meet Their Conversion Goals",
+          para: "Empower your brand to achieve greater campaign returns with our tailored CRO solutions. Let us be your partner in sustained growth and profitability.",
+          sub: [
+            {
+              h2: "Clear, Compelling User Experiences",
+              para1: "We cultivate a distinct conversion-first voice that resonates with your target audience. Our strategists understand different buyer psychologies, enabling us to craft experiences that feel natural, build trust, and guide users toward action with clarity and minimal friction at every step."
+            },
+            {
+              h2: "Experienced CRO Masters",
+              para1: "Our certified conversion optimisers are committed to delivering results that directly tie to your revenue. Every hypothesis we test, every page we redesign, and every campaign we refine is done with a singular goal: maximising the return on every marketing pound you invest."
+            }
+          ]
+        }
+      }
+      buttonText="Start your CRO audit" />
       <ServiceFAQ faqs={croFaqs} />
       <BottomCTA />
       

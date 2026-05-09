@@ -107,7 +107,24 @@ export default function PerformanceMarketingPage() {
       />
       
       {/* We reuse the CRO Benefit Showcase here as the "Campaign Performance" dashboard is the literal definition of Performance Marketing */}
-      <CROBenefitShowcase buttonText="Grow Your Pipeline" />
+      <CROBenefitShowcase 
+      data={
+        {
+          h1: "We help B2B and SaaS businesses build the most predictable pipeline",
+          para: "Ready to see why growth-focused teams trust ContentFlux to run their performance marketing? Here's what we bring to every engagement.",
+          sub: [
+            {
+              h2: "B2B and SaaS specialists",
+              para1: "We don't run generic campaigns for generic businesses. Our entire playbook is built around the longer sales cycles, multi-stakeholder decisions, and intent signals unique to B2B and SaaS buying — so your campaigns hit the right people at the right moment."
+            },
+            {
+              h2: "Pipeline that compounds",
+              para1: "We integrate performance marketing with your SEO and content strategy — so paid and organic channels reinforce each other. The result is a pipeline that doesn't stop the moment you pause a campaign."
+            }
+          ]
+        }
+      }
+      buttonText="Grow Your Pipeline" />
       
       <ServiceFAQ faqs={pmFaqs} />
       <BottomCTA />

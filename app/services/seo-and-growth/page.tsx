@@ -124,7 +124,25 @@ export default function SEOAndGrowthPage() {
       />
       
       {/* We reuse the CRO Benefit Showcase here as the "Campaign Performance" dashboard perfectly represents SEO reporting metrics */}
-      <CROBenefitShowcase buttonText="Start Your Growth Campaign" />
+      <CROBenefitShowcase 
+      
+        data={
+        {
+          h1: "We Help Your Brand Hit Its Growth Targets",
+          para: "We understand that behind every search query is a real person looking for a solution. Our strategies bridge that gap — connecting your brand with potential customers at the highest intent moments.",
+          sub: [
+            {
+              h2: "Build Unshakeable Search Authority",
+              para1: "Ranking at the top of Google requires more than keywords. We build topical authority, earn quality backlinks, and optimise every technical signal to establish your site as the definitive resource in your niche — the kind that competitors can't easily replicate."
+            },
+            {
+              h2: "Full-Funnel Growth Marketing",
+              para1: "We map every stage of your customer journey — from awareness to advocacy — and deploy the right mix of SEO, paid media, and conversion optimisation to turn organic traffic into predictable, scalable revenue for your business."
+            }
+          ]
+        }
+      }
+      buttonText="Start Your Growth Campaign" />
       
       <ServiceFAQ faqs={seoFaqs} />
       <BottomCTA />
