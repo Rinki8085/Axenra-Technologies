@@ -96,7 +96,7 @@ export default function CROBenefitShowcase({ buttonText }: CROBenefitShowcasePro
           </h2>
           
           <p className="text-brand-cool-gray leading-relaxed mb-10">
-            Ready to see why growth-focused teams trust ContentFlux to run their performance marketing? Here's what we bring to every engagement.
+            Ready to see why growth-focused teams trust Axenra to run their performance marketing? Here's what we bring to every engagement.
           </p>
 
           <div className="flex flex-col gap-8 mb-10">

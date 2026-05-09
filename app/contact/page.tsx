@@ -152,7 +152,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm">Email Us</p>
-                  <p className="text-brand-cool-gray text-sm">hello@axenra.com</p>
+                  <p className="text-brand-cool-gray text-sm">axenratechnologies</p>
                 </div>
               </div>
 

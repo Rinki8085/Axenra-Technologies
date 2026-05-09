@@ -101,7 +101,7 @@ export default function ReactBenefitShowcase() {
           </h2>
           
           <p className="text-brand-cool-gray leading-relaxed mb-10">
-            In the fast-paced world of digital engineering, ContentFlux has established itself as a powerhouse in results-driven React frontend development. Our agency is renowned for finding practical solutions to even the most complex UI challenges — delivering results that not only improve conversion rates but also strengthen team workflows. Part of what makes ContentFlux unique in the React space is our ability to share expertise in impactful, compounding ways.
+            In the fast-paced world of digital engineering, Axenra Technologies has established itself as a powerhouse in results-driven React frontend development. Our agency is renowned for finding practical solutions to even the most complex UI challenges — delivering results that not only improve conversion rates but also strengthen team workflows. Part of what makes Axenra Technologies unique in the React space is our ability to share expertise in impactful, compounding ways.
           </p>
 
           <div className="flex flex-col gap-8 mb-10">

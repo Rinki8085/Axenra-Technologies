@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Logo from '@/public/logo_img.png';
 import Link from 'next/link';
+import Image from "next/image";
 
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +40,7 @@ export default function AppNavbar() {
         {/* Brand */}
         <div className="flex-shrink-0">
           <Link href="/" className="font-orbitron font-bold text-2xl tracking-widest text-white">
-            AXEN<span className="text-brand-cyan-blue">RA</span>
+          <Image src={Logo} alt="Logo" width={160} height={120} />
           </Link>
         </div>
 

@@ -83,7 +83,7 @@ export default function BottomCTA() {
             </div>
             <div>
               <p className="text-white font-bold text-sm">Email Us</p>
-              <p className="text-brand-cool-gray text-xs">info@axenra.com</p>
+              <p className="text-brand-cool-gray text-xs">info@axenratechnologies.com</p>
             </div>
           </div>
         </div>

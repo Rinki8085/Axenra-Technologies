@@ -94,7 +94,7 @@ export default function CROPage() {
             Conversion Rate Optimization Services That <span className="text-brand-cyan-blue">Turn Traffic Into Revenue</span>
           </>
         }
-        description="At ContentFlux, we help businesses unlock the hidden revenue inside their existing marketing campaigns. Whether you run paid ads, email funnels, or organic content — our CRO specialists analyse every touchpoint, eliminate friction, and engineer experiences that convert with precision and confidence."
+        description="At Axenra Technologies, we help businesses unlock the hidden revenue inside their existing marketing campaigns. Whether you run paid ads, email funnels, or organic content — our CRO specialists analyse every touchpoint, eliminate friction, and engineer experiences that convert with precision and confidence."
         formTitle="Get Your Free CRO Audit"
       />
       

@@ -109,7 +109,7 @@ export default function SEOAndGrowthPage() {
           </>
         }
         paragraphs={[
-          "ContentFlux is a performance-focused SEO and growth marketing agency built for businesses that refuse to be invisible. We combine technical SEO mastery with data-led content and paid growth strategies to get you in front of the right audience at exactly the right moment.",
+          "Axenra Technologies is a performance-focused SEO and growth marketing agency built for businesses that refuse to be invisible. We combine technical SEO mastery with data-led content and paid growth strategies to get you in front of the right audience at exactly the right moment.",
           "Our team of strategists, SEO engineers, and growth hackers work as an extension of your team — deeply invested in your KPIs, your brand story, and your long-term competitive edge. From on-page optimisation to full-funnel growth campaigns, we've got every lever covered.",
           "We don't believe in vanity metrics. Every action we take is tied to revenue impact, search visibility, and sustainable brand growth. We are not satisfied until your business is where it deserves to be — at the top."
         ]}

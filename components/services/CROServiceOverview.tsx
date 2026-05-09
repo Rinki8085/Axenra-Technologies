@@ -110,7 +110,7 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
             ) : (
               <>
                 <p>
-                 At ContentFlux, performance marketing isn't just about running paid ads — it's about building a full-funnel acquisition system. We combine paid search, paid social, conversion-optimized landing pages, and data-driven audience targeting into one integrated strategy that consistently fills your sales pipeline.
+                 At Axenra Technologies, performance marketing isn't just about running paid ads — it's about building a full-funnel acquisition system. We combine paid search, paid social, conversion-optimized landing pages, and data-driven audience targeting into one integrated strategy that consistently fills your sales pipeline.
                 </p>
                 <p>
                   Our team maps your entire buyer journey — from the first ad impression to the booked sales call — and engineers every touchpoint to move your ICP closer to a decision. We obsess over conversion rates, funnel drop-offs, and revenue attribution so you can invest with confidence.

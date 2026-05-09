@@ -100,7 +100,7 @@ export default function ReactDevelopmentPage() {
       <DetailedServiceGrid 
         sectionTag="OUR CAPABILITIES"
         title={<>Unlock Your Brand's Potential with Our Powerful <span className="text-brand-cyan-blue">React JS Development Services</span></>}
-        description="At ContentFlux, our social media brand strategy is crafted to help you reach your customers' needs, engage authentically, and achieve measurable success across every platform. Each service below is purpose-built for React."
+        description="At Axenra Technologies, our social media brand strategy is crafted to help you reach your customers' needs, engage authentically, and achieve measurable success across every platform. Each service below is purpose-built for React."
         services={reactServices}
       />
       

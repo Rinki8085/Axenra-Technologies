@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from "next/image";
+import Logo from '@/public/logo_img.png';
 
 export default function AppFooter() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +14,7 @@ export default function AppFooter() {
           {/* Brand & Contact Column */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <Link href="/" className="font-orbitron font-bold text-2xl tracking-widest text-white">
-              AXEN<span className="text-brand-cyan-blue">RA</span>
+              <Image src={Logo} alt="Logo" width={160} height={120} />
             </Link>
             <p className="text-brand-cool-gray max-w-sm leading-relaxed">
               Performance-driven growth marketing agency helping B2B and SaaS companies generate consistent, qualified leads.
@@ -20,7 +22,7 @@ export default function AppFooter() {
             <div className="flex flex-col gap-4 mt-2">
               <a href="mailto:hello@axenra.com" className="flex items-center gap-3 text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">
                 <Mail size={18} className="text-brand-cyan-blue" />
-                hello@axenra.com
+                info@axenratechnologies.com
               </a>
               <a href="tel:+1234567890" className="flex items-center gap-3 text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">
                 <Phone size={18} className="text-brand-cyan-blue" />
