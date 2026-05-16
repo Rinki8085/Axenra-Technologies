@@ -9,9 +9,15 @@ interface CROServiceOverviewProps {
   title?: React.ReactNode;
   paragraphs?: React.ReactNode[];
   buttonText?: string;
+  funnelStages?: [string, string, string];
+  cvrBox?: {
+    metric: string;
+    title: string;
+    subtitle: string;
+  };
 }
 
-export default function CROServiceOverview({ badgeText, title, paragraphs, buttonText }: CROServiceOverviewProps) {
+export default function CROServiceOverview({ badgeText, title, paragraphs, buttonText, funnelStages = ['Visitors', 'Leads', 'Customers'], cvrBox = { metric: '+34%', title: 'Conversion Rate', subtitle: 'Average increase for clients' } }: CROServiceOverviewProps) {
   return (
     <section className="py-24 bg-[#060913]">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -40,7 +46,7 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
                 className="h-14 bg-[#121c2d] border border-white/10 rounded-lg flex items-center justify-center shadow-lg relative overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]" />
-                <span className="text-white font-bold tracking-wide z-10">Visitors</span>
+                <span className="text-white font-bold tracking-wide z-10">{funnelStages[0]}</span>
               </motion.div>
 
               {/* Funnel Stage 2 */}
@@ -52,7 +58,7 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
                 className="h-14 bg-brand-cyan-blue/20 border border-brand-cyan-blue/30 rounded-lg flex items-center justify-center shadow-lg relative overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]" />
-                <span className="text-white font-bold tracking-wide z-10">Leads</span>
+                <span className="text-white font-bold tracking-wide z-10">{funnelStages[1]}</span>
               </motion.div>
 
               {/* Funnel Stage 3 */}
@@ -64,7 +70,7 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
                 className="h-14 bg-emerald-500/20 border border-emerald-500/30 rounded-lg flex items-center justify-center shadow-lg relative overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]" />
-                <span className="text-white font-bold tracking-wide z-10">Customers</span>
+                <span className="text-white font-bold tracking-wide z-10">{funnelStages[2]}</span>
               </motion.div>
             </div>
 
@@ -77,11 +83,11 @@ export default function CROServiceOverview({ badgeText, title, paragraphs, butto
               className="bg-[#0A0F1F] border border-white/10 p-6 rounded-xl flex items-center gap-6 shadow-2xl w-full"
             >
               <div className="text-4xl font-black text-brand-cyan-blue font-orbitron">
-                +34%
+                {cvrBox.metric}
               </div>
               <div>
-                <p className="text-white font-bold text-sm">Conversion Rate</p>
-                <p className="text-brand-cool-gray text-xs mt-1">Average increase for clients</p>
+                <p className="text-white font-bold text-sm">{cvrBox.title}</p>
+                <p className="text-brand-cool-gray text-xs mt-1">{cvrBox.subtitle}</p>
               </div>
               <div className="ml-auto w-10 h-10 bg-brand-cyan-blue/10 rounded-lg flex items-center justify-center">
                 <TrendingUp className="text-brand-cyan-blue" size={20} />

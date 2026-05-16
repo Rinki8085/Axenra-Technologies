@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Target, Users, Rocket, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-
 export default function AboutPage() {
   return (
     <main className="flex flex-col min-h-screen bg-[#0a0f1a] pt-32 pb-24">

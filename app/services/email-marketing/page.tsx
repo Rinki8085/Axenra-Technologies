@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ServiceHero from "@/components/ServiceHero";
 import FeatureHighlights from "@/components/services/FeatureHighlights";
 import ServiceOverview from "@/components/services/ServiceOverview";
@@ -84,6 +85,12 @@ const emailMarketingFaqs = [
     answer: "Email marketing automation uses predefined triggers — subscriber actions, time intervals, or data conditions — to automatically send relevant messages without manual intervention. When someone joins your list, visits a product page, abandons a cart, makes a purchase, or becomes inactive, the automation system detects that event and delivers a tailored email (or sequence of emails) precisely timed to influence their next action. This creates a scalable, always-on communication engine that nurtures leads and drives revenue 24 hours a day, 7 days a week."
   }
 ];
+
+
+export const metadata: Metadata = {
+  title: "Email Marketing & Automation Services for B2B Business",
+  description: "Scale your pipeline with Axenra’s email marketing and automation services. We help B2B and SaaS businesses nurture leads & improve engagement.",
+};
 
 export default function EmailMarketingPage() {
   return (

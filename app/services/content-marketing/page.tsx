@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ServiceHero from "@/components/ServiceHero";
 import FeatureHighlights from "@/components/services/FeatureHighlights";
 import DetailedServiceGrid from "@/components/services/DetailedServiceGrid";
@@ -81,6 +82,12 @@ const contentFaqs = [
   }
 ];
 
+
+export const metadata: Metadata = {
+  title: "B2B Best Content Marketing Services | Drive Engagment With Content",
+  description: "Build authority and generate demand with Axenra’s B2B content marketing services. We create SEO-focused content strategies that drive engagement & business growth.",
+};
+
 export default function ContentMarketingPage() {
   return (
     <main>
@@ -88,7 +95,7 @@ export default function ContentMarketingPage() {
         badgeText="CONTENT MARKETING SERVICES"
         title={
           <>
-            Content Marketing Services That <span className="text-emerald-400">Inform, Engage & Convert</span> Your Audience
+            Content Marketing Services That <span className="text-brand-cyan-blue">Inform, Engage & Convert</span> Your Audience
           </>
         }
         description="To convert a visitor into a loyal customer, businesses need content that goes beyond promotion. Great content educates, builds trust, and inspires action. That's where our strategic content marketing services come into play — connecting your brand to the people who need it most."

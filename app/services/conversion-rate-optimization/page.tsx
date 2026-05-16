@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ServiceHero from "@/components/ServiceHero";
 import FeatureHighlights from "@/components/services/FeatureHighlights";
 import DetailedServiceGrid from "@/components/services/DetailedServiceGrid";
@@ -83,6 +84,12 @@ const croFaqs = [
     answer: "Yes — revenue attribution is core to everything we do. You receive monthly performance reports that link every experiment result directly to business outcomes: conversion rate lift, revenue per visitor, cost-per-acquisition improvements, and overall campaign ROAS improvements. Transparency is non-negotiable."
   }
 ];
+
+
+export const metadata: Metadata = {
+  title: "CRO Services for B2B SaaS | Conversion Rate Optimization Servicesgies",
+  description: "Increase conversions and turn more visitors into customers with Axenra’s CRO services. A/B testing, analytics, and UX optimization to improve ROI acquisition costs.",
+};
 
 export default function CROPage() {
   return (

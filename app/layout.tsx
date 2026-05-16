@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Orbitron } from "next/font/google";
 import AppNavbar from "@/components/Navbar";
 import AppFooter from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,8 +17,8 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "AXENRA Technologies | Growth-Driven Digital Marketing Agency",
-  description: "We help B2B and SaaS businesses generate consistent leads through SEO, high-converting content, and performance marketing.",
+  title: "Axenra Technologies | B2B & SaaS Growth Marketing Services",
+  description: "Accelerate your B2B and SaaS growth with Axenra Technologies. We help businesses generate high-quality leads, reduce CAC & scale revenue through growth marketing strategies.",
 };
 
 export default function RootLayout({
@@ -31,11 +32,12 @@ export default function RootLayout({
       className={`dark ${inter.variable} ${orbitron.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body 
+      <body
         className="min-h-screen flex flex-col bg-brand-midnight-navy text-brand-soft-white font-sans"
         suppressHydrationWarning
       >
         <AppNavbar />
+        <ScrollToTop />
         <div className="flex-grow">
           {children}
         </div>

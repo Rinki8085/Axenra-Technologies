@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ServiceHero from "@/components/ServiceHero";
 import FeatureHighlights from "@/components/services/FeatureHighlights";
 import DetailedServiceGrid from "@/components/services/DetailedServiceGrid";
@@ -80,6 +81,12 @@ const pmFaqs = [
   }
 ];
 
+
+export const metadata: Metadata = {
+  title: "Performance Marketing for B2B & SaaS | Performance Marketing Service",
+  description: "Generate qualified B2B leads and maximize ROI with Axenra’s performance marketing services. We create data-driven paid campaigns that accelerate business growth.",
+};
+
 export default function PerformanceMarketingPage() {
   return (
     <main>
@@ -97,7 +104,12 @@ export default function PerformanceMarketingPage() {
       <FeatureHighlights features={pmFeatures} />
       
       {/* We reuse the CRO Service Overview here as the Funnel visual represents Paid Media funnels perfectly */}
-      <CROServiceOverview buttonText="Build Your Funnel" badgeText="OUR APPROACH" />
+      <CROServiceOverview 
+        buttonText="Build Your Funnel" 
+        badgeText="OUR APPROACH" 
+        funnelStages={['Ad Impressions', 'Clicks', 'Booked Calls']}
+        cvrBox={{ metric: '-40%', title: 'CPA Reduction', subtitle: 'Average decrease for clients' }}
+      />
       
       <DetailedServiceGrid 
         sectionTag="OUR PAID MEDIA EXPERTISE"
@@ -108,6 +120,17 @@ export default function PerformanceMarketingPage() {
       
       {/* We reuse the CRO Benefit Showcase here as the "Campaign Performance" dashboard is the literal definition of Performance Marketing */}
       <CROBenefitShowcase 
+        statsBox={{
+          title: "Paid Campaign Impact",
+          stats: [
+            { label: "Cost Per Click", value: "-25%" },
+            { label: "Click-Through Rate", value: "+4.5%" },
+            { label: "Lead Quality", value: "+65%" },
+            { label: "Pipeline Value", value: "+$1.2M" },
+          ],
+          totalLabel: "Total ROAS",
+          totalValue: "4.5x"
+        }}
       data={
         {
           h1: "We help B2B and SaaS businesses build the most predictable pipeline",

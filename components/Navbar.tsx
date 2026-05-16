@@ -55,7 +55,7 @@ export default function AppNavbar() {
           
           {/* Services Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-brand-soft-white group-hover:text-brand-cyan-blue transition-colors font-medium text-sm py-2">
+            <button suppressHydrationWarning className="flex items-center gap-1 text-brand-soft-white group-hover:text-brand-cyan-blue transition-colors font-medium text-sm py-2">
               Services <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-brand-midnight-navy border border-white/10 rounded-xl shadow-xl shadow-black/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
@@ -91,6 +91,7 @@ export default function AppNavbar() {
         {/* Mobile Menu Toggle */}
         <div className="sm:hidden flex items-center">
           <button 
+            suppressHydrationWarning
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white hover:text-brand-cyan-blue transition-colors"
           >
@@ -115,6 +116,7 @@ export default function AppNavbar() {
               
               <div className="flex flex-col gap-4">
                 <button 
+                  suppressHydrationWarning
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className="flex items-center justify-between text-white text-2xl font-bold text-left"
                 >

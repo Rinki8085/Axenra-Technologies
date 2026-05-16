@@ -12,11 +12,29 @@ interface CROBenefitShowcaseProps {
     sub: {
       h2: string;
       para1: string;
-    }[]
-  }
+    }[];
+  };
+  statsBox?: {
+    title: string;
+    stats: { label: string; value: string }[];
+    totalLabel: string;
+    totalValue: string;
+  };
 }
 
-export default function CROBenefitShowcase({ buttonText, data }: CROBenefitShowcaseProps) {
+const defaultStatsBox = {
+  title: "Campaign Performance",
+  stats: [
+    { label: "Bounce Rate", value: "-25%" },
+    { label: "Avg Session", value: "+1m 45s" },
+    { label: "Conversion", value: "+3.2%" },
+    { label: "Form Fills", value: "+12%" },
+  ],
+  totalLabel: "Total ROI",
+  totalValue: "+42%",
+};
+
+export default function CROBenefitShowcase({ buttonText, data, statsBox = defaultStatsBox }: CROBenefitShowcaseProps) {
   return (
     <section className="py-24 bg-[#060913] border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -34,60 +52,28 @@ export default function CROBenefitShowcase({ buttonText, data }: CROBenefitShowc
           <div className="relative z-10 w-full max-w-sm bg-white p-8 rounded-2xl shadow-2xl">
             <h4 className="text-gray-900 font-bold text-lg mb-6 flex items-center gap-2">
               <TrendingUp className="text-[#00C2FF]" size={20} />
-              Campaign Performance
+              {statsBox.title}
             </h4>
 
             <div className="space-y-5">
               
-              {/* Stat 1 */}
-              <div className="flex items-center justify-between border-b border-gray-100 pb-4">
-                <div className="flex items-center gap-3 text-gray-600 text-sm font-medium">
-                  <TrendingDown size={16} />
-                  Bounce Rate
+              {statsBox.stats.map((stat, idx) => (
+                <div key={idx} className="flex items-center justify-between border-b border-gray-100 pb-4">
+                  <div className="flex items-center gap-3 text-gray-600 text-sm font-medium">
+                    <TrendingDown size={16} className={idx % 2 === 0 ? "text-gray-400" : "text-brand-cyan-blue"} />
+                    {stat.label}
+                  </div>
+                  <div className="text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded text-sm">
+                    {stat.value}
+                  </div>
                 </div>
-                <div className="text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded text-sm">
-                  -25%
-                </div>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="flex items-center justify-between border-b border-gray-100 pb-4">
-                <div className="flex items-center gap-3 text-gray-600 text-sm font-medium">
-                  <Clock size={16} />
-                  Avg Session
-                </div>
-                <div className="text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded text-sm">
-                  +1m 45s
-                </div>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="flex items-center justify-between border-b border-gray-100 pb-4">
-                <div className="flex items-center gap-3 text-gray-600 text-sm font-medium">
-                  <MousePointerClick size={16} />
-                  Conversion
-                </div>
-                <div className="text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded text-sm">
-                  +3.2%
-                </div>
-              </div>
-
-              {/* Stat 4 */}
-              <div className="flex items-center justify-between border-b border-gray-100 pb-4">
-                <div className="flex items-center gap-3 text-gray-600 text-sm font-medium">
-                  <FileText size={16} />
-                  Form Fills
-                </div>
-                <div className="text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded text-sm">
-                  +12%
-                </div>
-              </div>
+              ))}
 
             </div>
 
             <div className="mt-6 pt-4 border-t-2 border-gray-100 flex items-center justify-between">
-              <span className="text-gray-900 font-bold">Total ROI</span>
-              <span className="text-brand-cyan-blue font-black text-xl">+42%</span>
+              <span className="text-gray-900 font-bold">{statsBox.totalLabel}</span>
+              <span className="text-brand-cyan-blue font-black text-xl">{statsBox.totalValue}</span>
             </div>
 
           </div>
@@ -107,8 +93,8 @@ export default function CROBenefitShowcase({ buttonText, data }: CROBenefitShowc
           </p>
 
           <div className="flex flex-col gap-8 mb-10">
-           {data.sub.map((item) => (
-             <div className="flex gap-4">
+           {data.sub.map((item, index) => (
+             <div key={index} className="flex gap-4">
               <div className="w-10 h-10 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center shrink-0 mt-1">
                 <CheckCircle2 className="text-[#00C2FF]" size={20} />
               </div>

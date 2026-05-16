@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ServiceHero from "@/components/ServiceHero";
 import FeatureHighlights from "@/components/services/FeatureHighlights";
 import DetailedServiceGrid from "@/components/services/DetailedServiceGrid";
@@ -80,6 +81,12 @@ const seoFaqs = [
   }
 ];
 
+
+export const metadata: Metadata = {
+  title: "SEO & Growth | Axenra Technologies",
+  description: "Add your customized description for SEO & Growth here.",
+};
+
 export default function SEOAndGrowthPage() {
   return (
     <main>
@@ -102,6 +109,8 @@ export default function SEOAndGrowthPage() {
       <CROServiceOverview 
         buttonText="Get Your Free SEO Audit"
         badgeText="Who We Are"
+        funnelStages={['Impressions', 'Organic Clicks', 'Qualified Leads']}
+        cvrBox={{ metric: '+145%', title: 'Organic Traffic', subtitle: 'Average increase for clients' }}
         title={
           <>
             Your Growth Partner,<br />
@@ -125,7 +134,17 @@ export default function SEOAndGrowthPage() {
       
       {/* We reuse the CRO Benefit Showcase here as the "Campaign Performance" dashboard perfectly represents SEO reporting metrics */}
       <CROBenefitShowcase 
-      
+        statsBox={{
+          title: "SEO Performance Metrics",
+          stats: [
+            { label: "Keyword Rankings", value: "+450" },
+            { label: "Organic Sessions", value: "+125%" },
+            { label: "Domain Authority", value: "+15" },
+            { label: "Backlinks Built", value: "+320" },
+          ],
+          totalLabel: "Traffic Value ROI",
+          totalValue: "+210%"
+        }}
         data={
         {
           h1: "We Help Your Brand Hit Its Growth Targets",

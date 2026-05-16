@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
-
+import emailjs from '@emailjs/browser';
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -32,31 +32,33 @@ export default function ContactPage() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: formData.firstName + ' ' + formData.lastName,
+          email: formData.email,
+          phone: 'N/A',
+          website: formData.website || 'N/A',
+          goal: formData.goal || 'N/A',
+          message: formData.challenges || 'No message provided',
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        website: '',
+        goal: '',
+        challenges: ''
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          website: '',
-          goal: '',
-          challenges: ''
-        });
-      } else {
-        setSubmitStatus('error');
-        setErrorMessage(data.error || 'Failed to send message');
-      }
     } catch (error) {
+      console.error(error);
       setSubmitStatus('error');
-      setErrorMessage('A network error occurred. Please try again.');
+      setErrorMessage('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }

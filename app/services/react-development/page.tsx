@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ServiceHero from "@/components/ServiceHero";
 import FeatureHighlights from "@/components/services/FeatureHighlights";
 import DetailedServiceGrid from "@/components/services/DetailedServiceGrid";
@@ -79,6 +80,12 @@ const reactFaqs = [
     answer: "ReactJS frontend development services encompass the full spectrum of building user-facing digital products using the React JavaScript library — including component architecture design, responsive UI implementation, state management with Redux or Zustand, server-side rendering with Next.js, Progressive Web App development, React Native mobile apps, API integration, performance optimisation, and accessibility implementation. Our services transform designs and business requirements into fast, scalable, and maintainable production-ready React applications."
   }
 ];
+
+
+export const metadata: Metadata = {
+  title: "SEO & Growth Marketing for SaaS & B2B | Growth Marketing Services",
+  description: "Boost your search rankings, attract high-intent buyers, and grow organically with Axenra’s SEO and growth marketing services tailored for B2B and SaaS business.",
+};
 
 export default function ReactDevelopmentPage() {
   return (
