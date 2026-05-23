@@ -46,16 +46,16 @@ export default function AppNavbar() {
 
         {/* Desktop Links */}
         <div className="hidden sm:flex items-center gap-8">
-          <Link href="/" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-sm">
+          <Link href="/" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-base">
             Home
           </Link>
-          <Link href="/about" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-sm">
+          <Link href="/about" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-base">
             About
           </Link>
           
           {/* Services Dropdown */}
           <div className="relative group">
-            <button suppressHydrationWarning className="flex items-center gap-1 text-brand-soft-white group-hover:text-brand-cyan-blue transition-colors font-medium text-sm py-2">
+            <button suppressHydrationWarning className="flex items-center gap-1 text-brand-soft-white group-hover:text-brand-cyan-blue transition-colors font-medium text-base py-2">
               Services <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-brand-midnight-navy border border-white/10 rounded-xl shadow-xl shadow-black/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
@@ -64,7 +64,7 @@ export default function AppNavbar() {
                   <Link 
                     key={link.name} 
                     href={link.href}
-                    className="px-4 py-3 text-sm text-brand-soft-white hover:bg-white/5 hover:text-brand-cyan-blue transition-colors"
+                    className="px-4 py-3 text-base text-brand-soft-white hover:bg-white/5 hover:text-brand-cyan-blue transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -73,7 +73,10 @@ export default function AppNavbar() {
             </div>
           </div>
 
-          <Link href="/contact" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-sm">
+          <Link href="/blog" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-base">
+            Blog
+          </Link>
+          <Link href="/contact" className="text-brand-soft-white hover:text-brand-cyan-blue transition-colors font-medium text-base">
             Contact
           </Link>
         </div>
@@ -82,7 +85,7 @@ export default function AppNavbar() {
         <div className="hidden sm:flex items-center">
           <Link 
             href="/contact" 
-            className="flex items-center justify-center h-10 bg-brand-cyan-blue text-brand-midnight-navy font-bold rounded-full px-6 shadow-lg shadow-brand-cyan-blue/20 hover:scale-105 transition-transform"
+            className="flex items-center justify-center h-12 bg-brand-cyan-blue text-brand-midnight-navy font-bold rounded-full px-8 text-base shadow-lg shadow-brand-cyan-blue/20 hover:scale-105 transition-transform"
           >
             Schedule a Call
           </Link>
@@ -111,16 +114,16 @@ export default function AppNavbar() {
             className="absolute top-full left-0 right-0 h-screen bg-brand-midnight-navy/98 backdrop-blur-xl border-t border-white/10 sm:hidden overflow-y-auto pb-24"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
-              <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-white text-2xl font-bold">Home</Link>
-              <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-white text-2xl font-bold">About</Link>
+              <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-white text-3xl font-bold">Home</Link>
+              <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-white text-3xl font-bold">About</Link>
               
               <div className="flex flex-col gap-4">
                 <button 
                   suppressHydrationWarning
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between text-white text-2xl font-bold text-left"
+                  className="flex items-center justify-between text-white text-3xl font-bold text-left"
                 >
-                  Services <ChevronDown size={24} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  Services <ChevronDown size={30} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {isServicesOpen && (
@@ -135,7 +138,7 @@ export default function AppNavbar() {
                           key={link.name} 
                           href={link.href}
                           onClick={() => setIsMenuOpen(false)}
-                          className="text-brand-cool-gray text-lg hover:text-brand-cyan-blue"
+                          className="text-brand-cool-gray text-xl hover:text-brand-cyan-blue"
                         >
                           {link.name}
                         </Link>
@@ -145,7 +148,8 @@ export default function AppNavbar() {
                 </AnimatePresence>
               </div>
 
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="text-white text-2xl font-bold">Contact</Link>
+              <Link href="/blog" onClick={() => setIsMenuOpen(false)} className="text-white text-3xl font-bold">Blog</Link>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="text-white text-3xl font-bold">Contact</Link>
               
               <Link 
                 href="/contact" 

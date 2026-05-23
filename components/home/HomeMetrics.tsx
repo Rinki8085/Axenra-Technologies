@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const metrics = [
   { value: "150%", label: "Increase In Leads" },
@@ -14,7 +15,7 @@ export default function HomeMetrics() {
     <section className="py-20 bg-[#060913] border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white font-orbitron mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-white font-orbitron mb-6 leading-tight">
             We focus on building interest, generating demand, and <span className="text-brand-cyan-blue">turning traffic into revenue — with the best strategy and the clearest message.</span>
           </h2>
           <p className="text-brand-cool-gray text-sm md:text-base">
@@ -22,12 +23,12 @@ export default function HomeMetrics() {
 Executed by a team that thinks like founders and measures like CFOs.
           </p>
           <div className="flex justify-center gap-4 mt-8">
-            <button className="bg-[#00C2FF] text-[#0A0F1F] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-white transition-colors">
+            <Link href="/contact" className="bg-[#00C2FF] text-[#0A0F1F] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-white transition-colors">
               Get Free Audit
-            </button>
-            <button className="bg-transparent border border-white/10 text-white font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-white/5 transition-colors">
+            </Link>
+            <Link href="/contact" className="bg-transparent border border-white/10 text-white font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-white/5 transition-colors">
               View Case Studies
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function HomeHero() {
   return (
@@ -24,7 +25,7 @@ export default function HomeHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold text-white font-orbitron leading-[1.1] tracking-tight mb-8"
+          className="text-6xl md:text-8xl font-bold text-white font-orbitron leading-[1.1] tracking-tight mb-8"
         >
           Stop Buying Traffic. <br className="hidden md:block" />
           <span className="text-brand-cyan-blue">Start Building a Pipeline</span><br className="hidden md:block" /> That Pays.
@@ -45,12 +46,12 @@ export default function HomeHero() {
           transition={{ delay: 0.3 }}
           className="flex flex-col sm:flex-row justify-center items-center gap-4"
         >
-          <button className="w-full sm:w-auto bg-[#00C2FF] text-[#0A0F1F] font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white transition-colors">
+          <Link href="/contact" className="w-full sm:w-auto bg-[#00C2FF] text-[#0A0F1F] font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white transition-colors flex items-center justify-center">
             Schedule a Strategy Call &rarr;
-          </button>
-          <button className="w-full sm:w-auto bg-transparent border border-white/10 text-white font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white/5 transition-colors">
+          </Link>
+          <Link href="/contact" className="w-full sm:w-auto bg-transparent border border-white/10 text-white font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white/5 transition-colors flex items-center justify-center">
             See Our Growth Framework &rarr;
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

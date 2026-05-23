@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Link from 'next/link';
 
 interface ServiceHeroProps {
   badgeText: string;
@@ -94,7 +95,7 @@ export default function ServiceHero({ badgeText, title, description, formTitle }
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-white font-orbitron leading-[1.1] tracking-tight mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-black text-white font-orbitron leading-[1.1] tracking-tight mb-6"
           >
             {title}
           </motion.h1>
@@ -114,12 +115,12 @@ export default function ServiceHero({ badgeText, title, description, formTitle }
             transition={{ delay: 0.3 }}
             className="flex flex-wrap gap-4"
           >
-            <button className="bg-[#4EE6FF] text-[#0A0F1F] font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white transition-colors">
+            <Link href="/contact" className="bg-[#4EE6FF] text-[#0A0F1F] font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white transition-colors flex items-center justify-center">
               TALK TO A STRATEGIST
-            </button>
-            <button className="bg-transparent border border-white/10 text-white font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white/5 transition-colors">
+            </Link>
+            <Link href="/contact" className="bg-transparent border border-white/10 text-white font-bold text-sm tracking-wide px-8 py-4 rounded hover:bg-white/5 transition-colors flex items-center justify-center">
               SCHEDULE A FREE AUDIT
-            </button>
+            </Link>
           </motion.div>
         </div>
 

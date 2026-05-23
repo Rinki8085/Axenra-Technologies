@@ -53,10 +53,10 @@ export default function AppFooter() {
             <h4 className="text-white font-bold tracking-wider text-sm uppercase">Company</h4>
             <div className="flex flex-col gap-4">
               <Link href="/about" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">About Us</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Our Process</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Case Studies</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Blog</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Careers</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Our Process</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Case Studies</Link>
+              <Link href="/blog" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Blog</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Careers</Link>
               <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Contact</Link>
             </div>
           </div>
@@ -65,10 +65,10 @@ export default function AppFooter() {
           <div className="flex flex-col gap-6">
             <h4 className="text-white font-bold tracking-wider text-sm uppercase">Resources</h4>
             <div className="flex flex-col gap-4">
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Growth Framework</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Free SEO Audit</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Marketing ROI Calculator</Link>
-              <Link href="#" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Industry Reports</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Growth Framework</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Free SEO Audit</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Marketing ROI Calculator</Link>
+              <Link href="/contact" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors">Industry Reports</Link>
             </div>
           </div>
 
@@ -80,8 +80,8 @@ export default function AppFooter() {
             &copy; {currentYear} AXENRA Technologies. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-brand-cool-gray hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-brand-cool-gray hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/contact" className="text-brand-cool-gray hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/contact" className="text-brand-cool-gray hover:text-white transition-colors">Terms of Service</Link>
             <div className="flex items-center gap-4 ml-2">
               <a href="https://x.com/axenratech" target="_blank" rel="noopener noreferrer" className="text-brand-cool-gray hover:text-brand-cyan-blue transition-colors" aria-label="X (Twitter)">
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
