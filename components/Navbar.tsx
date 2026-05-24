@@ -38,7 +38,7 @@ export default function AppNavbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         
         {/* Brand */}
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <Link href="/" className="font-orbitron font-bold text-2xl tracking-widest text-white">
           <Image src={Logo} alt="Logo" width={160} height={120} />
           </Link>

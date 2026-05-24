@@ -58,7 +58,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
             </div>
 
             <h3 className="text-xl font-bold text-brand-soft-white mb-3 group-hover:text-brand-cyan-blue transition-colors font-orbitron line-clamp-2">
-              <Link href={`#`} className="before:absolute before:inset-0">
+              <Link href={`/blog/${post.slug}`} className="before:absolute before:inset-0">
                 {post.title}
               </Link>
             </h3>

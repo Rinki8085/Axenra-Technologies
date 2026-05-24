@@ -46,7 +46,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-brand-soft-white mb-4 group-hover:text-brand-cyan-blue transition-colors font-orbitron">
-              <Link href={`/blog/#`}>
+              <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
             </h2>
@@ -70,7 +70,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
               </div>
 
               <Link 
-                href={`/blog/#`}
+                href={`/blog/${post.slug}`}
                 className="inline-flex items-center text-brand-cyan-blue font-semibold hover:text-brand-soft-white transition-colors"
               >
                 Read Article

@@ -3,7 +3,7 @@ import GIF from "../public/logo_gif.gif";
 
 export default function Loader() {
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-white">
       <Image
         src={GIF}
         alt="Loading..."

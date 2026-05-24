@@ -31,7 +31,7 @@ export default function BlogHero() {
           className="text-4xl md:text-6xl font-extrabold text-brand-soft-white mb-6 tracking-tight font-orbitron"
         >
           Insights on <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-cyan-blue to-brand-deep-blue">B2B Marketing</span> & <br className="hidden md:block" />
-          Modern React Development
+          Modern Web Development
         </motion.h1>
 
         <motion.p

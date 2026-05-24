@@ -55,7 +55,7 @@ export default function RootLayout({
         </Script>
         <AppNavbar />
         <ScrollToTop />
-        <div className="flex-grow">
+        <div className="grow">
           {children}
         </div>
         <AppFooter />
