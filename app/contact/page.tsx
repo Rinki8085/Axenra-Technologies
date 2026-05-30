@@ -133,7 +133,7 @@ export default function ContactPage() {
       <section className="relative px-6 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-start">
         
         {/* Left Side: Contact Details */}
-        <div className="flex flex-col gap-8 lg:sticky lg:top-32">
+        <div className="flex flex-col gap-8 lg:sticky lg:top-24 pt-8">
           <div>
             <h2 className="text-3xl font-bold text-white font-orbitron mb-4">Start Your Project Today</h2>
             <p className="text-brand-cool-gray leading-relaxed mb-2">
@@ -149,7 +149,7 @@ export default function ContactPage() {
             
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4 bg-[#121c2d] border border-white/5 p-4 rounded-xl">
-                <div className="w-12 h-12 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center text-[#00C2FF]">
+                <div className="w-12 h-12 bg-brand-cyan-blue/10 rounded-lg flex items-center justify-center text-brand-cyan-blue">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -158,15 +158,15 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 bg-[#121c2d] border border-white/5 p-4 rounded-xl">
-                <div className="w-12 h-12 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center text-[#00C2FF]">
+              {/* <div className="flex items-center gap-4 bg-[#121c2d] border border-white/5 p-4 rounded-xl">
+                <div className="w-12 h-12 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center text-brand-cyan-blue">
                   <Phone size={24} />
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm">Call Us</p>
                   <p className="text-brand-cool-gray text-sm">+1 (XXX) XXX-XXXX</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* <div className="flex items-center gap-4 bg-[#121c2d] border border-white/5 p-4 rounded-xl">
                 <div className="w-12 h-12 bg-[#00C2FF]/10 rounded-lg flex items-center justify-center text-[#00C2FF]">
@@ -186,9 +186,9 @@ export default function ContactPage() {
               We don't just deliver services — we deliver outcomes.
             </p>
             <ul className="space-y-4 text-sm text-brand-cool-gray">
-              <li className="flex items-start gap-3"><ArrowRight size={18} className="text-[#00C2FF] shrink-0 mt-0.5" /> Data-driven marketing strategies</li>
-              <li className="flex items-start gap-3"><ArrowRight size={18} className="text-[#00C2FF] shrink-0 mt-0.5" /> Scalable technology solutions</li>
-              <li className="flex items-start gap-3"><ArrowRight size={18} className="text-[#00C2FF] shrink-0 mt-0.5" /> Focus on real, measurable growth</li>
+              <li className="flex items-start gap-3"><ArrowRight size={18} className="text-brand-cyan-blue shrink-0 mt-0.5" /> Data-driven marketing strategies</li>
+              <li className="flex items-start gap-3"><ArrowRight size={18} className="text-brand-cyan-blue shrink-0 mt-0.5" /> Scalable technology solutions</li>
+              <li className="flex items-start gap-3"><ArrowRight size={18} className="text-brand-cyan-blue shrink-0 mt-0.5" /> Focus on real, measurable growth</li>
             </ul>
           </div>
         </div>

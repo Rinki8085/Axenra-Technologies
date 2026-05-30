@@ -8,7 +8,7 @@ import Link from 'next/link';
 interface ServiceHeroProps {
   badgeText: string;
   title: React.ReactNode;
-  description: string;
+  description: React.ReactNode;
   formTitle: string;
 }
 

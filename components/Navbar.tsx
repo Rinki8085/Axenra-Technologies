@@ -21,12 +21,12 @@ export default function AppNavbar() {
   }, []);
 
   const servicesLinks = [
-    { name: "Performance Marketing", href: "/services/performance-marketing" },
-    { name: "SEO & Growth Marketing", href: "/services/seo-and-growth" },
-    { name: "Conversion Rate Optimization", href: "/services/conversion-rate-optimization" },
-    { name: "Content Marketing", href: "/services/content-marketing" },
-    { name: "Email Marketing & Automation", href: "/services/email-marketing" },
-    { name: "React JS Development", href: "/services/react-development" },
+    { name: "Performance Marketing", href: "/services/performance-marketing-services" },
+    { name: "SEO & Growth Marketing", href: "/services/seo-and-growth-services" },
+    { name: "Conversion Rate Optimization", href: "/services/conversion-rate-optimization-services" },
+    { name: "Content Marketing", href: "/services/content-marketing-services" },
+    { name: "Email Marketing & Automation", href: "/services/email-marketing-services" },
+    { name: "React JS Development", href: "/services/react-development-services" },
   ];
 
   return (
